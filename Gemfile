@@ -54,3 +54,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # add gems 
 gem 'jquery-datatables-rails'
 gem 'ajax-datatables-rails'
+gem 'bootstrap', '~>4.0.0alpha3.1'

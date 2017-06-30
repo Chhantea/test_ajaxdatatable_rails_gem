@@ -12,4 +12,5 @@ $ ->
       {data: 'name'}
       {data: 'details'}
       {data: 'qt'}
+      {data: 'action'}
     ]

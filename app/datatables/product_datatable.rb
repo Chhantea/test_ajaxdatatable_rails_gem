@@ -8,21 +8,23 @@ def_delegators :@view, :link_to, :h, :mailto, :edit_resource_path, :other_method
       # name: { source: "User.name", cond: :like }
     name: { source: "Product.name", cond: :like, searchable: true, orderable: true },
     details:  { source: "Product.details",  cond: :like },
-    qt:        { source: "Product.qt" },
+    qt:        { source: "Product.qt" }
     }
   end
+  private
 
   def data
     records.map do |record|
       {
-         name: link_to(truncate(record.name, length: 30),  {:action => "index",:id =>record.id, method: :get, remote: true}),
-        details: record.details,
-        qt: record.qt
+       name: link_to(truncate(record.name, length: 30),  {:action => "index",:id =>record.id, method: :get, remote: true}),
+        details:record.details,
+         qt: record.qt,
+        action: link_to("asd",{:action => "index",:id =>record.id, method: :get, remote: true},class: "btn btn-success")
       }
     end
   end
 
-  private
+
 
   def get_raw_records
     # insert query here
