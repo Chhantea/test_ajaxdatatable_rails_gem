@@ -4,6 +4,11 @@ $ ->
       1
       'desc'
     ] ]
+    "aoColumnDefs" : [
+     {
+       'bSortable' : false,
+       'aTargets' : [ 3]
+     }]
     processing: true
     serverSide: true
     ajax: $('#product-table').data('source')
